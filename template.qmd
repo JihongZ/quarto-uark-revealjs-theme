@@ -1,0 +1,34 @@
+---
+title: "Estimating the group differences of longitudinal network analysis: An example of eating disorder psychopathology"
+subtitle: "Modern Method Modeling 2024"
+author: "Dr. Jihong Zhang"
+institute: | 
+  Educational Statistics and Research Methods (ESRM)
+  
+  Department of Counseling, Leadership, and Research Methods
+date: "2024-05-13"
+format: 
+  uark-revealjs:
+    chalkboard: true
+    embed-resources: false
+    code-fold: true
+    number-sections: true
+    number-depth: 1
+#jupyter: python3
+---
+
+## Outline
+
+1.  Background
+    -   Longitudinal network analysis
+    -   Group comparison in network analysis
+    -   Eating disorder psychopathology
+2.  Method
+3.  Result
+4.  Discussion
+
+# Background
+
+## Longitudinal Network analysis
+
+## Eating disorder psychopathology

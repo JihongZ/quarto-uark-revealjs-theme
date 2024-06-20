@@ -20,15 +20,210 @@ format:
 ## Outline
 
 1.  Background
-    -   Longitudinal network analysis
-    -   Group comparison in network analysis
     -   Eating disorder psychopathology
-2.  Method
-3.  Result
-4.  Discussion
+    -   Longitudinal network analysis
+    -   Group comparisons in network analysis
+2.  Research Questions
+3.  Data
+4.  Measures
+5.  Method
+6.  Results
+7.  Discussion
 
 # Background
 
-## Longitudinal Network analysis
-
 ## Eating disorder psychopathology
+
+-   Dynamic development among emotion regulation, interpersonal problems, and eating disorder is always of interests.
+
+    -   Emotion regulation theory suggests emotion regulation issues may results in the development of ED
+
+    -   Interpersonal psychotherapy theory (IPT) suggests that interpersonal problems may contribute to ED
+
+-   However,
+
+    -   The development of ED is a dynamic process, that may requires longitudinal study design
+
+    -   The relations between contributors and ED are complex (i.e., feedback loop)
+
+    -   Boys or girls may differ regarding the developmental process of ED
+
+## Longitudinal network
+
+Thus, [longitudinal network analysis]{.underline} can be a suitable statistical tool for the problems mentioned previously.
+
+-   The **graphical vector autoregressive** (GVAR; Epskamp, 2020; Wild et al., 2010) analysis was used to estimate the networks.
+
+-   Three types of network structures are estimated by longitudinal network analysis
+
+    -   Temporal network
+
+    -   Contemporal network
+
+    -   Between-individual network
+
+## Group comparison in network analysis
+
+In network analysis, groups can be compared from three aspects:
+
+1.  Network structure
+2.  Node-level measures: node centrality (importance) or node bridging strength
+3.  Network edge weigths
+
+## Research Questions:
+
+1.  Are there any sex differences in the network structures, or in the central and bridging symptoms observed in the **cross-sectional** relationships among disordered eating, difficulties in interpersonal problems, and emotion regulation in Chinese male and female adolescents at the between-individual level?
+2.  \*Are there any sex differences in the network structures, or in the central and bridging symptoms observed in the **longitudinal** relationships among disordered eating, difficulties in interpersonal problems, and emotion regulation in Chinese male and female adolescents in the within-individual level?
+
+## Data
+
+-   4-wave data collection were conducted over 18 months.
+
+-   For each wave, demographic information and self-reported answers of three questionnaires (emotional regulation, interpersonal problems, and eating disorder) from 1652 high school students in China were collected.
+
+-   After data cleaning, N = 1540 cases left including 53.9% girls and 46.1% boys
+
+-   Age ranges from 11 to 17 years with a mean 15.2 years old
+
+## Measures
+
+For network analysis, we used subscales and items as nodes.
+
+1.  **Emotion regulation**: Difficulties in Emotion Regulation Scale (DERS-18). 6 subscales measures different aspects of emotion dysregualtion: Awareness, Clarity, Goals, Non-acceptance, Impulse, Strategies
+2.  **Interpersonal problems**: Inventory of Interpersonal Problems—Short Circumplex (IIP-SC). 8 subscales were included measuring varied aspects of interpersonal problems: domineering, cold, avoidant etc.
+3.  **Eating disorder**: 12-item short form of Eating Disorder Examination Questionnaire (EDE-QS). 12 items measured different disordered eating behaviors.
+
+## Data Analysis
+
+### 1. Node selection
+
+-   For emotion regulation and interpersonal problem questions, 14 subscales were selected because their measured constructs have been well examined and theory-driven.
+
+-   For eating disorder, each items represent overlapping but different eating disorder problems. To make sure nodes are distinct and unique, we used the *goldbricker* algorithm to drop overalapping (dupplicated) symptoms, which give rise to 8 items included in the analyzed network.
+
+### 2. Network estimation
+
+-   Multi-group GVAR was applied to the data to estimate boys' and girls' temporal/contemporary/cross-sectional network separately.
+
+-   Furthermore, we prune the networks and identify the most important nodes and edges using *prune* function in *psychonetric* package in R.
+
+## Data Analysis (Cont.)
+
+### 3. Overall network evaluation
+
+-   Network stability measured by correlation stability (CS) coefficients
+
+### 4. Group differences
+
+-   Using [likelihood ratio test]{.underline} (LRT) to examine network structure differences by gender
+
+    -   Model H0 (the model with all edge weights constrained to be equal)
+
+    -   Model H1 (the model with all edge weights freely estimated)
+
+    -   Calculate the likelihood ratio between Model H0 and H1 and perform significance test
+
+-   Examine gender differences in node centrality and bridging strength
+
+    -   Compare estimated node centrality and bridge strength by gender
+
+    -   Accuracy: test the accuracy of node centrality differences using bootstrapping sampling
+
+# Results
+
+## Overall Network Model Checking
+
+1.  The multigroup network stability statistics were all acceptable for contemporary/between-subject networks according to the criteria of CS coefficients above 0.7
+2.  The temporal network was less stable with CS coefficients ranging from **.51** to **.56**
+
+## Group differences - Temporal Network
+
+::: columns
+::: {.column width="50%"}
+![Boys' temporal network](figures/boys_temporal_MG.jpg){width="100%"}
+:::
+
+::: {.column width="50%"}
+![Girls' temporal network](figures/girls_temporal_MG.jpg){width="100%"}
+:::
+:::
+
+## Group differences - Temporal Network
+
+::: columns
+::: {.column width="50%"}
+### Boys
+
+1.  Sparsity: **8.06%** of non-zero edges (temporal)
+2.  Strength: Mean(SD) of edge weights is **0.127(0.094)**
+3.  Node *weight/shape preoccupation* (EDE-WP) exhibited the highest **InStrength**
+4.  Node *weight/shape dissatisfaction* (EDE-WD) exhibited the highest **OutStrength**
+5.  Node *Awareness* (Awr) exhibited the highest **bridge strength**
+:::
+
+::: {.column width="50%"}
+### Girls
+
+1.  Sparsity: **10.60%** of non-zero edges (temporal)
+2.  Strength: Mean(SD) of edge weights is **0.128(0.102)**
+3.  Node *weight/shape preoccupation* (EDE-WP) exhibited the highest **InStrength**
+4.  Node *weight/shape dissatisfaction* (EDE-WD) exhibited the highest **OutStrength**
+5.  Node *weight/shape dissatisfaction* (EDE-WD) exhibited the highest **bridge strength**
+:::
+:::
+
+## Accuracy test: Node Strength Difference
+
+::: columns
+::: {.column width="60%"}
+![](figures/Node_Strength_Table.png){fig-align="center"}
+:::
+::: {.column width="40%"}
+1. *Long periods without eating* (EDE-WE) and *Food preoccupation* (EDE-FP) have significant gender differences in node Outstrength
+2. Weight/shape control by vomiting or taking laxatives (EDE-VT) have significant gender differences in node InStrength
+:::
+:::
+
+## Accuracy test: Bridge Strength Difference
+
+::: columns
+::: {.column width="60%"}
+![](figures/Bridge_Strength_Table.png){fig-align="center"}
+:::
+::: {.column width="40%"}
+1. *Awareness* (Awr) and *Goals* (Gls) have higher bridge strength in boys than girls
+2. *Weight/shape preoccupation* (EDE-WP) and *Binge eating episode* (EDE-BE) have higher bridge strength in boys than girls.
+:::
+:::
+
+## Discussion
+
+### Commonality
+
+1.  Weight strength is similar for boys and girls, suggesting symptoms have similar impact on other symptoms.
+2.  For both boys and girls, overvaluation of weight/shape is the most influential factor in ED networks than may severely impact interpersonal network, emotion regulation, and other ED problems.
+
+### Differences
+
+1.  Network structures of boys and girls are significantly different in term of Likelihood ratio test (LRT).
+2.  Nodes of girls' network are more densely related than boys', suggesting more girls' symptoms are likely to influence ED.
+3.  Lack of emotional awareness is an potential maintenance factor of boys, which is a novel finding.
+
+## Further direction
+
+There are more things to do to examine group differences in the longitudinal network framework:
+
+### Global:
+
+1. More simulation studys to validate the LRT method in examining group differences of global network structure
+
+2. Groups may differ in network density and average edge weights. What it means in application research need more investigation? 
+
+### Node-level:
+
+3. Groups may differ in most important nodes but also differ in less important nodes. What that mean and how we interpret that?
+
+4. Are group's edge weights comparable? For example, the partial correlation between node A with node B differ by groups but how to interpret that?
+
+## Thank you.
+

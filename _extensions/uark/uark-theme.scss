@@ -44,7 +44,7 @@ $body-color:                $charcoal !default;
 $link-color:                              $red !default;
 
 $font-family-sans-serif:      'Minion Pro', sans-serif !default;
-$presentation-font-size-root: 2em !default;
+$presentation-font-size-root: 2.7em !default;
 
 $presentation-title-slide-text-align: left;
 
@@ -77,7 +77,7 @@ $code-block-bg:  #F5F5F5 !default;
   bottom: 10px;
   right: 10px;
   min-height: 10%;
-  max-height: 4em  !important;
+  max-height: 2.5em  !important;
   height: 8%;
   width: auto;
   color: $white;
@@ -133,9 +133,10 @@ $code-block-bg:  #F5F5F5 !default;
 }
 
 .reveal .slides h3 {
-  margin-top: -0.5em;
+  text-transform: capitalize !important;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
   font-size: 3rem;
-  margin-bottom: 1em;
 }
 
 .reveal .slides h2::before {

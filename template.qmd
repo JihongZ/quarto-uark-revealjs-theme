@@ -19,38 +19,40 @@ format:
 
 ## Outline
 
-1.  Background
-    -   Eating disorder psychopathology
-    -   Longitudinal network analysis
-    -   Group comparisons in network analysis
-2.  Research Questions
-3.  Data
-4.  Measures
+1.  Research Questions
+- Can eating disorders can be considered as a network
+- Why psychological network can be used to examine eating disorder
+- How to use multigroup network analysis to examine gender difference in the network of eating disorders
+3.  Data Measure
 5.  Method
 6.  Results
 7.  Discussion
 
 # Background
 
-## Eating disorder psychopathology
+## Question 1: Can Eating disorder be considered as a network?
 
--   Dynamic development among emotion regulation, interpersonal problems, and eating disorder is always of interests.
+1.   Dynamic development among emotion regulation, interpersonal problems, and eating disorder being considered as a network has theoretical background.
 
-    -   Emotion regulation theory suggests emotion regulation issues may results in the development of ED
+- Emotion regulation theory suggests emotion regulation issues may results in the development of ED
 
-    -   Interpersonal psychotherapy theory (IPT) suggests that interpersonal problems may contribute to ED
+- Interpersonal psychotherapy theory (IPT) suggests that interpersonal problems may contribute to ED
 
--   However,
+2.  Previous research has examined the network-like structure of ED
 
-    -   The development of ED is a dynamic process, that may requires longitudinal study design
+-   Some studies considered the development of ED as a dynamic process
+-   Some argue that the relations between risky factors (emotion, interpersonal relations) and ED are complex (i.e., feedback loop)
+-   Boys or girls may differ regarding the developmental process of ED
 
-    -   The relations between contributors and ED are complex (i.e., feedback loop)
+## Question 2: Why psychological network can be used for this topic?
 
-    -   Boys or girls may differ regarding the developmental process of ED
+[longitudinal network analysis]{.underline} can be a suitable statistical tool for the problems mentioned previously for following reasons.
 
-## Longitudinal network
+1. It consider symptoms related to each other, which constitutes to a *symptom network*
+2. It can interpret the complex relationships by identifying the most important factors in this complex network
+3. It can compare the group-level network structures, which other models can hardly do 
 
-Thus, [longitudinal network analysis]{.underline} can be a suitable statistical tool for the problems mentioned previously.
+## More Details about longitudinal network analysis
 
 -   The **graphical vector autoregressive** (GVAR; Epskamp, 2020; Wild et al., 2010) analysis was used to estimate the networks.
 
@@ -62,18 +64,18 @@ Thus, [longitudinal network analysis]{.underline} can be a suitable statistical 
 
     -   Between-individual network
 
-## Group comparison in network analysis
+## Question 3:  How to examine group difference in the networks analysis
 
 In network analysis, groups can be compared from three aspects:
 
 1.  Network structure
 2.  Node-level measures: node centrality (importance) or node bridging strength
-3.  Network edge weigths
+3.  Network edge weights
 
 ## Research Questions:
 
-1.  Are there any sex differences in the network structures, or in the central and bridging symptoms observed in the **cross-sectional** relationships among disordered eating, difficulties in interpersonal problems, and emotion regulation in Chinese male and female adolescents at the between-individual level?
-2.  \*Are there any sex differences in the network structures, or in the central and bridging symptoms observed in the **longitudinal** relationships among disordered eating, difficulties in interpersonal problems, and emotion regulation in Chinese male and female adolescents in the within-individual level?
+1.  Are there any gender differences in the **network structures**, or in the **central and bridging symptoms** observed in the cross-sectional networks of eating disorders
+2.  How about the longitudinal networks of eating disorders (We only show this today)
 
 ## Data
 
@@ -99,13 +101,13 @@ For network analysis, we used subscales and items as nodes.
 
 -   For emotion regulation and interpersonal problem questions, 14 subscales were selected because their measured constructs have been well examined and theory-driven.
 
--   For eating disorder, each items represent overlapping but different eating disorder problems. To make sure nodes are distinct and unique, we used the *goldbricker* algorithm to drop overalapping (dupplicated) symptoms, which give rise to 8 items included in the analyzed network.
+-   For eating disorder, we want to makre sure each item represent one unique eating disorder problem. Thus, we used the *goldbricker* algorithm to drop overalapping (dupplicated) symptoms, which give rise to 8 items included in the analyzed network.
 
 ### 2. Network estimation
 
--   Multi-group GVAR was applied to the data to estimate boys' and girls' temporal/contemporary/cross-sectional network separately.
+-   Multi-group GVAR was applied to the data to estimate boys' and girls' temporal/contemporary/between-subject network.
 
--   Furthermore, we prune the networks and identify the most important nodes and edges using *prune* function in *psychonetric* package in R.
+-   Furthermore, we pruned the networks and identify the most important nodes and edges using *prune* function in *psychonetric* package in R.
 
 ## Data Analysis (Cont.)
 
@@ -113,7 +115,7 @@ For network analysis, we used subscales and items as nodes.
 
 -   Network stability measured by correlation stability (CS) coefficients
 
-### 4. Group differences
+### 4. Test the significance of group differences
 
 -   Using [likelihood ratio test]{.underline} (LRT) to examine network structure differences by gender
 
@@ -148,7 +150,7 @@ For network analysis, we used subscales and items as nodes.
 :::
 :::
 
-## Group differences - Temporal Network
+## Summary: Group differences - Temporal Network
 
 ::: columns
 ::: {.column width="50%"}
@@ -179,8 +181,10 @@ For network analysis, we used subscales and items as nodes.
 ![](figures/Node_Strength_Table.png){fig-align="center"}
 :::
 ::: {.column width="40%"}
+**Are the node differences due to the sampling error? We used bootstrapping method to test that:**
+
 1. *Long periods without eating* (EDE-WE) and *Food preoccupation* (EDE-FP) have significant gender differences in node Outstrength
-2. Weight/shape control by vomiting or taking laxatives (EDE-VT) have significant gender differences in node InStrength
+2. *Weight/shape control by vomiting or taking laxatives* (EDE-VT) have significant gender differences in node InStrength
 :::
 :::
 
@@ -191,6 +195,8 @@ For network analysis, we used subscales and items as nodes.
 ![](figures/Bridge_Strength_Table.png){fig-align="center"}
 :::
 ::: {.column width="40%"}
+**Are the node differences due to the sampling error? We used bootstrapping method to test that:**
+
 1. *Awareness* (Awr) and *Goals* (Gls) have higher bridge strength in boys than girls
 2. *Weight/shape preoccupation* (EDE-WP) and *Binge eating episode* (EDE-BE) have higher bridge strength in boys than girls.
 :::
@@ -198,16 +204,16 @@ For network analysis, we used subscales and items as nodes.
 
 ## Discussion
 
-### Commonality
+### Commonality between gender-level network
 
-1.  Weight strength is similar for boys and girls, suggesting symptoms have similar impact on other symptoms.
-2.  For both boys and girls, overvaluation of weight/shape is the most influential factor in ED networks than may severely impact interpersonal network, emotion regulation, and other ED problems.
+1.  Weight strength of temporal network are similar for boys and girls, suggesting symptoms have similars impact on other symptoms.
+2.  For both groups, node **overvaluation of weight/shape** is the most influential factor in ED networks , which mean the symptom may severely impact interpersonal network, emotion regulation, and other ED problems.
 
 ### Differences
 
-1.  Network structures of boys and girls are significantly different in term of Likelihood ratio test (LRT).
-2.  Nodes of girls' network are more densely related than boys', suggesting more girls' symptoms are likely to influence ED.
-3.  Lack of emotional awareness is an potential maintenance factor of boys, which is a novel finding.
+1.  Network structures of boys and girls are significantly different in term of likelihood ratio test (LRT).
+2.  Nodes of girls' network are more densely related than boys', suggesting higher likelihood of **comorbidity** for girls. 
+3.  **Lack of emotional awareness** is an potential maintenance factor of boys, which is a novel finding.
 
 ## Further direction
 
@@ -225,5 +231,9 @@ There are more things to do to examine group differences in the longitudinal net
 
 4. Are group's edge weights comparable? For example, the partial correlation between node A with node B differ by groups but how to interpret that?
 
-## Thank you.
+## Thank you. 
+
+Let me know if you have any questions.
+
+You can also contact me via [**jzhang@uark.edu**]{.underline}
 

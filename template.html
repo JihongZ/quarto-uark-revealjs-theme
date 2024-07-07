@@ -10,9 +10,9 @@
 <link href="template_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.32">
 
-  <meta name="author" content="Dr.&nbsp;Jihong Zhang">
+  <meta name="author" content="Jihong Zhang*, Ph.D; Jinbo He, Ph.D">
   <meta name="dcterms.date" content="2024-05-13">
-  <title>Estimating the group differences of longitudinal network analysis: An example of eating disorder psychopathology</title>
+  <title>Group comparison of longitudinal network analysis: An example of eating disorder psychopathology</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -329,98 +329,124 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="_extensions/uark/old-main-clock-sun.jpg" data-background-position="60% 105%" data-background-size="100% 25%" class="quarto-title-block center">
-  <h1 class="title">Estimating the group differences of longitudinal network analysis: An example of eating disorder psychopathology</h1>
+  <h1 class="title">Group comparison of longitudinal network analysis: An example of eating disorder psychopathology</h1>
   <p class="subtitle">Modern Method Modeling 2024</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Dr.&nbsp;Jihong Zhang 
+Jihong Zhang*, Ph.D; Jinbo He, Ph.D 
 </div>
         <p class="quarto-title-affiliation">
-            </p><p>Educational Statistics and Research Methods (ESRM)</p>
-            <p>Department of Counseling, Leadership, and Research Methods</p>
+            </p><p>Educational Statistics and Research Methods (ESRM) Program*</p>
+            <p>University of Arkansas</p>
           <p></p>
     </div>
 </div>
 
   <p class="date">2024-05-13</p>
 </section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
+<section id="presentation-outline" class="slide level2">
+<h2>Presentation Outline</h2>
 <ol type="1">
-<li>Research Questions</li>
-</ol>
+<li><p>General Questions</p>
 <ul>
-<li>Can eating disorders can be considered as a network</li>
-<li>Why psychological network can be used to examine eating disorder</li>
-<li>How to use multigroup network analysis to examine gender difference in the network of eating disorders</li>
-</ul>
-<ol start="3" type="1">
-<li>Data Measure</li>
-<li>Method</li>
-<li>Results</li>
-<li>Discussion</li>
+<li><p>Can eating disorders be considered as a network?</p></li>
+<li><p>Why the longitudinal network is a suitable tool for examining this topic?</p></li>
+<li><p>How to compare groups whithin the framework of longitudinal network?</p></li>
+</ul></li>
+<li><p>Measures</p></li>
+<li><p>Method</p></li>
+<li><p>Results</p></li>
+<li><p>Discussion</p></li>
+<li><p>Future direction</p></li>
 </ol>
 </section>
 <section>
-<section id="background" class="title-slide slide level1 center" data-number="1">
-<h1><span class="header-section-number">1</span> Background</h1>
+<section id="general-questions" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> General questions</h1>
 
 </section>
 <section id="question-1-can-eating-disorder-be-considered-as-a-network" class="slide level2">
 <h2>Question 1: Can Eating disorder be considered as a network?</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="figures/structure.jpg" style="width:100.0%"></p>
+</div><div class="column" style="width:60%;">
 <ol type="1">
-<li>Dynamic development among emotion regulation, interpersonal problems, and eating disorder being considered as a network has theoretical background.</li>
+<li>Understanding interrelationship between different components: emotion regulation, interpersonal problems, and eating disorder can be conceptualized as a symtom network via theoretical frameworks</li>
 </ol>
 <ul>
-<li><p>Emotion regulation theory suggests emotion regulation issues may results in the development of ED</p></li>
-<li><p>Interpersonal psychotherapy theory (IPT) suggests that interpersonal problems may contribute to ED</p></li>
+<li><p>The <strong>Emotion regulation theory</strong> suggests difficulty in emotion regulation issues can results in ED behaviors</p></li>
+<li><p><strong>Interpersonal psychotherapy theory</strong> posits that interpersonal problems may exacerbate ED (Murphy et al., 2012)</p></li>
+<li><p>Empirical studies considered these three consitute a “ecosystem” (Ambwani et al., 2014). ER and interpersonal function exibit reciprocal effects on ED maintance.</p></li>
 </ul>
+</div>
+</div>
+<p><strong>However, the dynamics of eating disorders has not been well investigated.</strong></p>
+</section>
+<section id="question-1-can-eating-disorder-be-considered-as-a-network-1" class="slide level2">
+<h2>Question 1: Can Eating disorder be considered as a network?</h2>
 <ol start="2" type="1">
-<li>Previous research has examined the network-like structure of ED</li>
+<li>Examine why ED have a network-like structure</li>
 </ol>
 <ul>
-<li>Some studies considered the development of ED as a dynamic process</li>
+<li>Some considered the development of ED as a longitudinal process (Mallorquí-Bagué et al., 2018)</li>
 <li>Some argue that the relations between risky factors (emotion, interpersonal relations) and ED are complex (i.e., feedback loop)</li>
-<li>Boys or girls may differ regarding the developmental process of ED</li>
+<li>Additionally, some highlight that boys or girls also exibit gender difference regarding the developmental process of ED</li>
 </ul>
 </section>
 <section id="question-2-why-psychological-network-can-be-used-for-this-topic" class="slide level2">
 <h2>Question 2: Why psychological network can be used for this topic?</h2>
-<p><u>longitudinal network analysis</u> can be a suitable statistical tool for the problems mentioned previously for following reasons.</p>
+<p><u>Longitudinal network analysis</u> have been widely applied in psychopathology and proven as a suitable tool for addressing the problems mentioned in the first general question.</p>
 <ol type="1">
-<li>It consider symptoms related to each other, which constitutes to a <em>symptom network</em></li>
-<li>It can interpret the complex relationships by identifying the most important factors in this complex network</li>
-<li>It can compare the group-level network structures, which other models can hardly do</li>
+<li>It considers symptoms related to each other as in a <em>symptom network</em>.</li>
+<li>It allows us to identify the most important symptoms (disordered behaviors) in this complex network</li>
+<li>It can estimate temporal effects of one symptom on the others controlling effects of other variables</li>
 </ol>
 </section>
-<section id="more-details-about-longitudinal-network-analysis" class="slide level2">
-<h2>More Details about longitudinal network analysis</h2>
-<ul>
-<li><p>The <strong>graphical vector autoregressive</strong> (GVAR; Epskamp, 2020; Wild et al., 2010) analysis was used to estimate the networks.</p></li>
-<li><p>Three types of network structures are estimated by longitudinal network analysis</p>
-<ul>
-<li><p>Temporal network</p></li>
-<li><p>Contemporal network</p></li>
-<li><p>Between-individual network</p></li>
-</ul></li>
-</ul>
+<section id="question-2-why-psychological-network-can-be-used-for-this-topic-1" class="slide level2">
+<h2>Question 2: Why psychological network can be used for this topic?</h2>
+<p>We estimated network parameters using <strong>graphical vector autoregressive</strong> (GVAR; Epskamp, 2020; Wild et al., 2010) algorithm</p>
+<p>Three types of network structures are estimated:</p>
+<ol type="1">
+<li><p><strong>Temporal</strong> network (temporal effect)</p></li>
+<li><p><strong>Contemporaneous</strong> network (within-person effects controlling for temporal effects)</p></li>
+<li><p><strong>Between-individual</strong> network (individual differences)</p></li>
+</ol>
 </section>
-<section id="question-3-how-to-examine-group-difference-in-the-networks-analysis" class="slide level2">
-<h2>Question 3: How to examine group difference in the networks analysis</h2>
+<section id="question-3-how-to-compare-groups-in-longitudinal-network" class="slide level2">
+<h2>Question 3: How to compare groups in longitudinal network</h2>
 <p>In network analysis, groups can be compared from three aspects:</p>
 <ol type="1">
-<li>Network structure</li>
-<li>Node-level measures: node centrality (importance) or node bridging strength</li>
-<li>Network edge weights</li>
+<li><p><strong>Network structure</strong> (e.g., some nodes connected in group A but not in group B)</p></li>
+<li><p><strong>Node-level measures</strong>: node centrality (importance) or node bridging strength (e.g., some nodes can be more central in group A while not in group B)</p></li>
+<li><p><strong>Network edge weights</strong> (e.g., node 1 and node 2 have strong relationship in group A but weaker relationship in group B)</p></li>
 </ol>
+</section>
+<section id="things-to-be-considered" class="slide level2">
+<h2>Things to be considered</h2>
+<ol type="1">
+<li><p>Which variables (nodes) should be included in the network?</p>
+<ul>
+<li>Items?</li>
+<li>Subscale scores?</li>
+<li>Latent factor scores?</li>
+<li>Mixed</li>
+</ul></li>
+</ol>
+<p>There are no clear rules of node types. It depends on theory model.</p>
+<ol start="2" type="1">
+<li>Are different networks comparable?</li>
+</ol>
+<p>The network of sample A differs from the network of sample B in term of network structures or centrality measures. They only have quantative differences in parameter estimates or they are measuring different constructs?</p>
 </section>
 <section id="research-questions" class="slide level2">
 <h2>Research Questions:</h2>
 <ol type="1">
-<li>Are there any gender differences in the <strong>network structures</strong>, or in the <strong>central and bridging symptoms</strong> observed in the cross-sectional networks of eating disorders</li>
-<li>How about the longitudinal networks of eating disorders (We only show this today)</li>
+<li><p>Are there any gender differences in the <strong>network characteristics</strong> of longitudinal networks</p></li>
+<li><p>Are there any gender differences in the <strong>network structures</strong> of eating disorder longitudinal networks</p></li>
+<li><p>Are there any gender differences in the <strong>node centrality and bridge strength</strong> of longitudinal networks</p></li>
 </ol>
 </section>
 <section id="data" class="slide level2">
@@ -440,17 +466,19 @@ Dr.&nbsp;Jihong Zhang
 <li><strong>Interpersonal problems</strong>: Inventory of Interpersonal Problems—Short Circumplex (IIP-SC). 8 subscales were included measuring varied aspects of interpersonal problems: domineering, cold, avoidant etc.</li>
 <li><strong>Eating disorder</strong>: 12-item short form of Eating Disorder Examination Questionnaire (EDE-QS). 12 items measured different disordered eating behaviors.</li>
 </ol>
+<p>We have <strong>26</strong> nodes in initial networks.</p>
 </section>
 <section id="data-analysis" class="slide level2">
 <h2>Data Analysis</h2>
-<h3 id="node-selection">1. Node selection</h3>
+<h3 id="node-item-selection">1. Node (item) selection</h3>
 <ul>
 <li><p>For emotion regulation and interpersonal problem questions, 14 subscales were selected because their measured constructs have been well examined and theory-driven.</p></li>
 <li><p>For eating disorder, we want to makre sure each item represent one unique eating disorder problem. Thus, we used the <em>goldbricker</em> algorithm to drop overalapping (dupplicated) symptoms, which give rise to 8 items included in the analyzed network.</p></li>
 </ul>
+<p>We have <strong>22</strong> nodes in further network analysis.</p>
 <h3 id="network-estimation">2. Network estimation</h3>
 <ul>
-<li><p>Multi-group GVAR was applied to the data to estimate boys’ and girls’ temporal/contemporary/between-subject network.</p></li>
+<li><p>Multi-group GVAR was applied to the data to estimate boys’ and girls’ temporal/contemporaneous/between-subject network.</p></li>
 <li><p>Furthermore, we pruned the networks and identify the most important nodes and edges using <em>prune</em> function in <em>psychonetric</em> package in R.</p></li>
 </ul>
 </section>
@@ -458,9 +486,9 @@ Dr.&nbsp;Jihong Zhang
 <h2>Data Analysis (Cont.)</h2>
 <h3 id="overall-network-evaluation">3. Overall network evaluation</h3>
 <ul>
-<li>Network stability measured by correlation stability (CS) coefficients</li>
+<li>Network stability measured by correlation stability (CS) coefficients (Epskamp et al., 2018), which estimates the accuracy of centrality measures and node strength using bootstrapping</li>
 </ul>
-<h3 id="test-the-significance-of-group-differences">4. Test the significance of group differences</h3>
+<h3 id="test-group-differences">4. Test group differences</h3>
 <ul>
 <li><p>Using <u>likelihood ratio test</u> (LRT) to examine network structure differences by gender</p>
 <ul>
@@ -480,10 +508,10 @@ Dr.&nbsp;Jihong Zhang
 <h1><span class="header-section-number">2</span> Results</h1>
 
 </section>
-<section id="overall-network-model-checking" class="slide level2">
-<h2>Overall Network Model Checking</h2>
+<section id="overall-network-stability" class="slide level2">
+<h2>Overall Network Stability</h2>
 <ol type="1">
-<li>The multigroup network stability statistics were all acceptable for contemporary/between-subject networks according to the criteria of CS coefficients above 0.7</li>
+<li>The multigroup network stability statistics were all acceptable for contemporaneous/between-subject networks according to the criteria of CS coefficients above 0.7</li>
 <li>The temporal network was less stable with CS coefficients ranging from <strong>.51</strong> to <strong>.56</strong></li>
 </ol>
 </section>
@@ -564,17 +592,21 @@ Dr.&nbsp;Jihong Zhang
 <li><em>Awareness</em> (Awr) and <em>Goals</em> (Gls) have higher bridge strength in boys than girls</li>
 <li><em>Weight/shape preoccupation</em> (EDE-WP) and <em>Binge eating episode</em> (EDE-BE) have higher bridge strength in boys than girls.</li>
 </ol>
+<p><strong>Target nodes for intervention on comorbidity.</strong></p>
 </div>
 </div>
 </section>
-<section id="discussion" class="slide level2">
-<h2>Discussion</h2>
-<h3 id="commonality-between-gender-level-network">Commonality between gender-level network</h3>
+<section id="discussion-group-commonality" class="slide level2">
+<h2>Discussion: Group Commonality</h2>
 <ol type="1">
-<li>Weight strength of temporal network are similar for boys and girls, suggesting symptoms have similars impact on other symptoms.</li>
-<li>For both groups, node <strong>overvaluation of weight/shape</strong> is the most influential factor in ED networks , which mean the symptom may severely impact interpersonal network, emotion regulation, and other ED problems.</li>
+<li><p>Edge weight strength of temporal network are similar for boys and girls, suggesting symptoms have similars impact on other symptoms.</p></li>
+<li><p>Emotion dysregulation have interconnections with eating disorders and interpersonal problems.</p></li>
+<li><p>Disordered eating behaviors also closely relate to each others within the eating disorder community. One disorder eating problem is likely to activte other problems.</p></li>
+<li><p>For both groups, nodes related to <strong>overvaluation of weight/shape</strong> (preoccupation or dissatisifaction) are the most influential factors in ED networks, which implys the symptoms should be main focus for eating disorder interventions.</p></li>
 </ol>
-<h3 id="differences">Differences</h3>
+</section>
+<section id="discussion-group-differences" class="slide level2">
+<h2>Discussion: Group Differences</h2>
 <ol type="1">
 <li>Network structures of boys and girls are significantly different in term of likelihood ratio test (LRT).</li>
 <li>Nodes of girls’ network are more densely related than boys’, suggesting higher likelihood of <strong>comorbidity</strong> for girls.</li>

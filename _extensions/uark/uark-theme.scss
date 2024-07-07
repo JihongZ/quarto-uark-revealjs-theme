@@ -36,7 +36,7 @@ $tabset-border-color: $sand;
 
 /*-- scss:defaults --*/
 // Headings
-$headingTextTransform: uppercase;
+//$headingTextTransform: uppercase;
 
 $body-bg:                   $white !default;
 $body-color:                $charcoal !default;
@@ -84,10 +84,13 @@ $code-block-bg:  #F5F5F5 !default;
 }
 
 // Title
+.reveal .slides s.p {
+  font-size: 95% !important;
+}
 
 #title-slide{
-  top: 3em !important;
-  font-size: 75% !important;
+  top: 2em !important;
+  font-size: 90% !important;
   margin-top: 10vh;
   
   .quarto-title-authors {
@@ -117,12 +120,14 @@ $code-block-bg:  #F5F5F5 !default;
   text-transform: uppercase;
 }
 
+
+
 .center{
   background-color: $sand !important;
 }
 
 .reveal .slides h1{
-  text-transform: capitalize;
+  //text-transform: capitalize;
 }
 
 .reveal .slides h2{
@@ -151,8 +156,9 @@ $code-block-bg:  #F5F5F5 !default;
 .reveal .slides h3{
   text-transform: uppercase;
   color: $red;
-  font-size: 100%;
+  font-size: 120%;
 }
+
 
 .v-center-container {
   display: flex !important;

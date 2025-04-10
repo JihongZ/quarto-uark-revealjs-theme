@@ -6,8 +6,8 @@ contributes:
   format:
     revealjs:
         logo: UA_Logo.png
-        theme: uark-theme.scss
-        highlight-style: github
+        theme: [uark-theme.scss, lecture.scss]
+        highlight-style: atom-one
         width: 1920
         height: 1080
         slide-number: true
@@ -18,5 +18,8 @@ contributes:
           data-background-size: 100% 25%
         overview: true
         progress: true
-        touch: true
+        touch: false
         controls-layout: bottom-right
+        include-in-header: 
+          - file: font.html
+          - add-answer-button.html

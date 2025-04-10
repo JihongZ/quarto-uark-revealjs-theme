@@ -1,4 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/minion-pro');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 $red:         #A6192E !default;
 $purple:      #80225F !default;
@@ -25,6 +27,8 @@ $colors: (
 
 $tabset-border-color: $sand;
 
+
+
 /*Resources
 1. https://brand.uark.edu/social-media/downloads.php
 2. Logo: https://brand.uark.edu/graphic-identity/logos-and-wordmarks/index.php
@@ -43,14 +47,14 @@ $body-color:                $charcoal !default;
 
 $link-color:                              $red !default;
 
-$font-family-sans-serif:      'Minion Pro', sans-serif !default;
-$presentation-font-size-root: 2.7em !default;
+$font-family-sans-serif:      'Abel', sans-serif !default;
+$presentation-font-size-root: 2.3em !default;
 
 $presentation-title-slide-text-align: left;
 
 // Code Blocks
 $code-block-font-size: 70% !default;
-$code-block-bg:  #F5F5F5 !default;
+//$code-block-bg:  #F5F5F5 !default;
 
 /* -- scss:mixins --*/
 
@@ -120,8 +124,6 @@ $code-block-bg:  #F5F5F5 !default;
   text-transform: uppercase;
 }
 
-
-
 .center{
   background-color: $sand !important;
 }
@@ -132,9 +134,9 @@ $code-block-bg:  #F5F5F5 !default;
 
 .reveal .slides h2{
   text-transform: capitalize !important;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 0.3em;
 }
 
 .reveal .slides h3 {
@@ -147,16 +149,9 @@ $code-block-bg:  #F5F5F5 !default;
 .reveal .slides h2::before {
   content:"";
   position: absolute;
-  border-bottom: 0.05em solid $charcoal; /*use this to adjust underlin color and size*/
+  border-bottom: 0.08em solid $charcoal; /*use this to adjust underlin color and size*/
   width:100%;  /*use this to adjust underline width*/
   height:1.5em; /*use this to adjust underline position*/
-}
-
-
-.reveal .slides h3{
-  text-transform: uppercase;
-  color: $red;
-  font-size: 120%;
 }
 
 
@@ -166,12 +161,36 @@ $code-block-bg:  #F5F5F5 !default;
   align-items: center;
 }
 
-.reveal .slides code{
-  color: $bright-red !important;
+/* Code styling */
+code span.er {
+  color: #ebcb8b;
+  text-decoration: none;
+}
+
+.reveal div.cell-output-stdout::before{
+  content: "R Output:";
+  color: $red;
+  background-color: #f2eff6;
+  display: block;
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 3px 5px;
+  font-family: 'Taub Sans', monospace;
+}
+
+.reveal div.cell-output-stdout{ // outside of code block
+  border-radius: 8px;
+  border: 2px solid $purple;
+  margin-bottom: 1em; // spacing between output box to next element
+}
+
+.reveal .slides code{ // for in-line code
+  background-color: #e5eaf5;
+  border-radius: 8px;
+  color: $stone !important;
 }
 
 // Colours
-
 .red{
   color: $red !important;
 }
@@ -209,7 +228,6 @@ $code-block-bg:  #F5F5F5 !default;
 }
 
 // Hover Text
-
 .hovertext {
   position: relative;
   border-bottom: 1px dotted $charcoal;
@@ -241,4 +259,130 @@ $code-block-bg:  #F5F5F5 !default;
 
 strong {
   color: $red;
+  text-decoration: $green dashed underline 3px;
+  text-decoration-skip-ink: none;
+}
+
+/*-- stripped table --*/
+.reveal table {
+  border: 1px solid $stone;
+  width: 100%;
+  td:hover {background-color: #ebcb8b;} /* Hover color */
+  th {
+    text-align: center;
+    background-color: #04AA6D;
+    color: white;
+    border-bottom: 1px solid #ddd;
+  }
+  td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+ 
+
+.table-striped {
+  > thead > tr > th {
+    background-color: $stone;
+    color: white;
+  }
+  > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f2f2f2;
+  }
+  > tbody > tr:nth-of-type(even) > * {
+    background-color: $sand;
+  }
+}
+
+/*Details */
+
+details > p {
+  border-radius: 0 0 10px 10px;
+  background-color: #ddd;
+  padding: 2px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px black;
+}
+
+details[open] > summary {
+  background-color: #ccf;
+}
+
+/* 萌娘百科上的黑幕效果 */
+.heimu, .heimu a, a .heimu, .heimu a.new {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+}
+.heimu:hover, .heimu:active,
+.heimu:hover .heimu, .heimu:active .heimu {
+    color: white !important;
+}
+.heimu:hover a, a:hover .heimu,
+.heimu:active a, a:active .heimu {
+    color: lightblue !important;
+}
+.heimu:hover .new, .heimu .new:hover, .new:hover .heimu,
+.heimu:active .new, .heimu .new:active, .new:active .heimu {
+    color: #BA0000 !important;
+}
+
+/* 萌娘百科上的文字模糊效果 */
+.mohu, .mohu a, a .mohu, .mohu a.new {
+    background-color: #FAF9F6;
+    color: #252525;
+    text-shadow: none;
+    filter: blur(8px);
+}
+.mohu:hover, .mohu:active,
+.mohu:hover .mohu, .mohu:active .mohu {
+    filter: none !important;
+}
+
+.callout-content, .callout-tip {
+  font-size: 1.4em;
+}
+
+button.show-answer {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  font-size: 1em;
+  font-family:  'Titillium Web';
+  text-align: center;
+  padding: 10px;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 8px;
+}
+
+button.show-answer:hover {
+  background-color: white;
+  color: #04AA6D;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.redcolor, .redcolor a, a .redcolor, .redcolor a.new {
+  color: #e60000; /* Bright red text */
+  background-color: #ccccff; /* Light blue background */
+  font-weight: bold; /* Makes the text bold */
+  padding: 5px; /* Adds spacing around the text */
+  border-radius: 5px; /* Softens the background edges */
+  display: inline-block; /* Ensures proper background wrapping */
+}
+
+.bluecolor, .bluecolor a, a .bluecolor, .bluecolor a.new {
+  color: #0000e6; /* Deep blue text */
+  background-color: #D6D2C4; /* Light red/pink background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  font-weight: bold; /* Bold text for emphasis */
+  padding: 5px; /* Adds spacing for better readability */
+  border-radius: 5px; /* Rounded corners for aesthetics */
+  display: inline-block; /* Ensures the background properly wraps */
+}
+
+.bigger {
+  font-size: 33px;
+  font-size: 3.5rem;
 }
